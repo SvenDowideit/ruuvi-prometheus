@@ -46,3 +46,13 @@ Ruuvi version 3 data format Bluetooth LE advertisements.
 * Bluetooth LE; bluetoothd must not be running.
 
 [bluewalker]: https://gitlab.com/jtaimisto/bluewalker/
+
+## Running in Docker
+
+You can run this in a privileged container (only slightly safer than tunning the binary as root on the host)
+
+by running 
+
+```shell
+docker run --rm -it --privileged --net=host -p 9521:9521 {{.ImageName}}
+```
